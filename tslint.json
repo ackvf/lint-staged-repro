@@ -1,0 +1,47 @@
+{
+  "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"],
+  "defaultSeverity": "warning",
+  "rules": {
+    "semicolon": [true, "always", "ignore-bound-class-methods"],
+    "indent": [true, "spaces", 2],
+    "quotemark": [true, "single", "jsx-double", "avoid-escape"],
+    "ordered-imports": {
+      "severity": "warning",
+      "options": {
+        "import-sources-order": "any",
+        "named-imports-order": "any",
+        "grouped-imports": true,
+        "groups": [
+          { "name": "react", "match": "^react$", "order": 10 },
+          { "name": "@notino", "match": "^@notino", "order": 30 },
+          { "name": "@ src prefix", "match": "^@", "order": 35 },
+          { "name": "parent dir", "match": "^([.]/)?[.][.]", "order": 40 },
+          { "name": "current dir", "match": "^[.]/?", "order": 50 },
+          { "name": "3rd party", "match": "^.*", "order": 20 }
+        ]
+      }
+    },
+    "member-ordering": [false],
+    "object-literal-sort-keys": false,
+    "no-var-requires": false,
+    "no-shadowed-variable": false,
+    "no-console": [false],
+    "variable-name": false,
+    "jsx-alignment": [true],
+    "jsx-boolean-value": ["never"],
+    "jsx-no-multiline-js": false,
+    "jsx-no-lambda": false,
+    "no-submodule-imports": false,
+    "no-implicit-dependencies": false,
+    "max-classes-per-file": false,
+    "no-bitwise": false,
+    "interface-name": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "packages/rich-content/dist/*",
+      "packages/admin/build/**/*",
+      "**/*{js,jsx}"
+    ]
+  }
+}
