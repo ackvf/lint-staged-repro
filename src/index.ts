@@ -1,6 +1,6 @@
-import './styles.css';
+import "./styles.css";
 
-document.getElementById('app').innerHTML = `
+document.getElementById("app").innerHTML = `
 <h1>Hello!</h1>
 <div>
   To reproduce the issue clone this repo, soft-reset the branch "checkout-this" and try to commit the contents again.
